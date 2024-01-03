@@ -16,5 +16,5 @@ First time using Figma. Project was built based of the Figma design below.
 ## Links
 
 Link to page on GitHub:
-GitHub repository:
+GitHub repository: https://github.com/dcam4u/se_project_aroundtheus
 Video discussing project build:
