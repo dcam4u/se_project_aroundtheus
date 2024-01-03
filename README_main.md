@@ -9,7 +9,7 @@ HTML/CSS, Flexbox, Grid, BEM and Media Queries
 
 ## Figma
 
-First time using Figma. Project was built based of the Figma design below.
+First time using Figma. Project was built based off the Figma design below.
 
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
