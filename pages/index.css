@@ -76,11 +76,11 @@
     margin: 36px 0 0;
   }
 
-  .card__list {
+  .cards__list {
     padding: 0;
   }
 
-  .footer__copyright {
+  .footer {
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
