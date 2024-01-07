@@ -2,7 +2,7 @@
   background-color: #000;
 }
 
-.card__list {
+.cards__list {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
@@ -57,15 +57,3 @@
   width: 21px;
   height: 18px;
 }
-
-/* @media screen (max-width: 320px) {
-  .card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border-radius: 10px 10px 10px 10px;
-    max-height: 361px;
-    padding: 0;
-    margin: 0;
-  }
-} */
