@@ -20,6 +20,7 @@
 .card__image {
   width: 282px;
   height: 282px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
@@ -53,7 +54,4 @@
 
 .card__like-button:hover {
   background: transparent url(../images/heart-hover.svg) center no-repeat;
-  border: none;
-  width: 21px;
-  height: 18px;
 }
