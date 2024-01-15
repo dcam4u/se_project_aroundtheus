@@ -1,5 +1,9 @@
 @media screen and (max-width: 880px) {
-    .page__section {
+    .header {
+        max-width: 775px;
+    }
+
+    .profile {
         max-width: 775px;
     }
 
@@ -10,8 +14,13 @@
         font-size: 30px;
         font-style: normal;
     }
-  }
 
+    .footer {
+        max-width: 93%;
+        padding: 0 19px;
+        margin: 0 auto;
+    }
+  }
 
 @media screen and (max-width: 580px) {
     .page__section {
@@ -31,6 +40,7 @@
     }
   
     .profile {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       max-width: 480px;
@@ -87,10 +97,11 @@
     }
   
     .footer {
-        display: flex;
-        align-self: center;
-        max-width: 282px;
+      display: flex;
+      align-self: center;
+      max-width: 280px;
       font-size: 14px;
-      margin: 48px 19px 36px;
+      margin: 0 auto;
+      padding: 48px 0 36px;
     }
       
