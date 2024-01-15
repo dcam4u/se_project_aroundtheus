@@ -87,6 +87,9 @@
     }
   
     .footer {
+        display: flex;
+        align-self: center;
+        max-width: 282px;
       font-size: 14px;
       margin: 48px 19px 36px;
     }
