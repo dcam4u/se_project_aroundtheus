@@ -54,4 +54,5 @@
 
 .card__like-button:hover {
   background: transparent url(../images/heart-hover.svg) center no-repeat;
+  cursor: pointer;
 }
