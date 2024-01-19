@@ -5,3 +5,22 @@
   color: #545454;
   margin-bottom: 60px;
 }
+
+@media screen and (max-width: 880px) {
+  .footer {
+    max-width: 93%;
+    padding: 0 19px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .footer {
+    display: flex;
+    align-self: center;
+    max-width: 280px;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 48px 0 36px;
+  }
+}

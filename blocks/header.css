@@ -1,5 +1,35 @@
 .header {
-  margin-top: 45px;
-  min-height: 74px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+.header__logo {
+  margin-top: 45px;
+  margin-bottom: 41px;
+}
+
+@media screen and (max-width: 880px) {
+  .header {
+    max-width: 775px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    max-width: 575px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    max-width: 480px;
+    max-width: 100%;
+  }
+
+  .header__logo {
+    margin-left: 27px;
+    margin-bottom: 32px;
+    margin-top: 28px;
+    width: 126px;
+    height: 24px;
+  }
 }
