@@ -28,7 +28,11 @@
             <h1 class="profile__title">
               Jacques Cousteau - Extra test to test for edit button wrap
             </h1>
-            <button class="profile__edit-button" type="button"></button>
+            <button
+              class="profile__edit-button"
+              id="profile-edit-button"
+              type="button"
+            ></button>
             <p class="profile__description">
               Explorer - This is just a bunch of random text because the edit
               button is wrapping. I am not sure how to fix this.
@@ -112,9 +116,9 @@
       </footer>
     </div>
 
-    <div class="modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close"></button>
+        <button class="modal__close" id="profile-modal-close-button"></button>
         <form class="modal__form">
           <p class="modal__heading">Edit Profile</p>
           <input
