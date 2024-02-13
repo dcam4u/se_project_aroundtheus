@@ -17,7 +17,7 @@
   line-height: 29.05px;
 }
 
-.modal__opened {
+.modal_opened {
   display: flex;
 }
 
