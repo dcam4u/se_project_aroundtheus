@@ -25,24 +25,19 @@
             alt="Avatar"
           />
           <div class="profile__info">
-            <h1 class="profile__title">
-              Jacques Cousteau - Extra test to test for edit button wrap
-            </h1>
+            <h1 class="profile__title">Jacques Cousteau</h1>
             <button
               class="profile__edit-button"
               id="profile-edit-button"
               type="button"
             ></button>
-            <p class="profile__description">
-              Explorer - This is just a bunch of random text because the edit
-              button is wrapping. I am not sure how to fix this.
-            </p>
+            <p class="profile__description">Explorer</p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
+            <!-- <li class="card">
               <img
                 src="./images/yosemite-valley.png"
                 class="card__image"
@@ -107,7 +102,7 @@
                 <h2 class="card__title">Lago di Braies</h2>
                 <button class="card__like-button" type="button"></button>
               </div>
-            </li>
+            </li> -->
           </ul>
         </section>
       </main>
@@ -125,20 +120,30 @@
             type="text"
             name="title"
             class="modal__form modal__form_input"
-            id="title"
+            id="profile-title-input"
             placeholder="Name"
           />
           <input
             type="text"
             name="description"
             class="modal__form modal__form_input"
-            id="description"
+            id="profile-description-input"
             placeholder="Description"
           />
           <button class="modal__button modal__button_save">Save</button>
         </form>
       </div>
     </div>
+
+    <template id="card-template">
+      <li class="card">
+        <img src="" class="card__image" alt="" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
 
     <script src="./scripts/index.js"></script>
   </body>
