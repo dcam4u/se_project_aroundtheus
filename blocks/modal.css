@@ -50,7 +50,9 @@
   flex-direction: column;
 }
 
-.modal__form_input {
+.modal__form_input,
+.modal__form_input_type_title,
+.modal__form_input_type_url {
   margin-bottom: 30px;
   width: 358px;
   height: 27.26px;
