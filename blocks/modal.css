@@ -8,7 +8,11 @@
   z-index: 999;
   padding: 0 19px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  display: none;
+  /* display: none; */
+  display: flex;
+  visibility: hidden;
+  transition: visibility 0s, 0.6s, opacity 0.6s;
+
 }
 
 .modal__heading {
@@ -18,7 +22,9 @@
 }
 
 .modal_opened {
-  display: flex;
+  /* display: flex; */
+  visibility: visible;
+  transition-duration: 0.3s;
 }
 
 .modal__container {
@@ -30,6 +36,21 @@
   border-radius: 10px;
 }
 
+.modal__container-preview {
+  position: relative;
+  margin: 90px auto;
+}
+
+.modal__preview-image-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.5px;
+  margin: 10px 0 0 0;
+}
+.modal__preview-image {
+  max-height: 540px;
+  max-width: 816px;
+}
 .modal__close {
   position: absolute;
   bottom: calc(100% + 5px);
@@ -69,7 +90,8 @@
   color: #000;
 }
 
-.modal__button_save {
+.modal__button_save,
+.modal__button_create {
   margin-top: 18px;
   background-color: #000;
   color: #fff;
@@ -83,6 +105,11 @@
   padding: 0;
 }
 
+.modal__button_create:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 630px) {
   .modal__close {
     height: 26px;
@@ -90,12 +117,34 @@
     bottom: calc(100% + 18px);
     left: calc(100% + -30px);
   }
+
+  #preview-image-modal-close-button {
+    height: 30px;
+    width: 30px;
+    bottom: calc(100% + 3px);
+    left: calc(100% + 3px);
+}
+
+.modal__container-preview {
+  position: relative;
+  margin: 305px 40px 0px;
+}
+
+.modal__container-preview {
+  max-height: 75vh;
+  max-width: 75vw;
+}
+
+.modal__preview-image {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 @media screen and (max-width: 580px) {
   .modal {
-    top: -360px;
+    top: -163px;
   }
+
   .modal__container {
     padding: 22px;
   }
@@ -107,16 +156,20 @@
     margin-bottom: 75px;
   }
 
-  .modal__form_input {
+  .modal__form_input,
+  .modal__form_input_type_title,
+  .modal__form_input_type_url {
     width: 238px;
   }
 
-  .modal__button_save {
+  .modal__button_save,
+  .modal__button_create {
     font-size: 14px;
     line-height: 17px;
   }
 
-  .modal__button_save {
+  .modal__button_save,
+  .modal__button_create {
     width: 238px;
   }
 }

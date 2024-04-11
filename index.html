@@ -91,14 +91,29 @@
             placeholder="Image URL"
             id="modal__form_input_type_url"
           />
-          <button class="modal__button modal__button_save">Save</button>
+          <button class="modal__button modal__button_create">Create</button>
         </form>
+      </div>
+    </div>
+
+    <!-- Preview Image Moddal -->
+    <div class="modal" id="preview-image-modal">
+      <div class="modal__container-preview">
+        <img src="" alt="" class="modal__preview-image" />
+        <p class="modal__preview-image-title"></p>
+        <button
+          class="modal__close"
+          id="preview-image-modal-close-button"
+        ></button>
       </div>
     </div>
 
     <template id="card-template">
       <li class="card">
         <img src="" class="card__image" alt="" />
+
+        <button class="card__delete-button" type="button"></button>
+
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
