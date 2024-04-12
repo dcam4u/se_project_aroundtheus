@@ -87,6 +87,11 @@ function renderCard(cardData) {
   cardListElement.prepend(cardElement);
 }
 
+// function renderCard(item, method = "prepend") {
+//   const cardElement = getCardElement(item);
+//   cardList[method](cardElement);
+// }
+
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageElement = cardElement.querySelector(".card__image");
@@ -133,6 +138,7 @@ function handleAddCardFormSubmit(e) {
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardListElement);
   closeModal(addCardModal);
+  e.target.reset();
 }
 
 /**------------------------------------------------------------------------
