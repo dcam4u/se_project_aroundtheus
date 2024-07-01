@@ -76,10 +76,12 @@ const cardUrlInput = addCardFormElement.querySelector(
  *========================================================================**/
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeEscPress);
 }
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeEscPress);
 }
 
 function renderCard(cardData) {
@@ -168,3 +170,25 @@ addCardModalCloseButton.addEventListener("click", () =>
 );
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListElement));
+
+/**========================================================================
+ *                ESC Press and Overlay Click Modal Close
+ *========================================================================**/
+
+const allModals = [profileEditModal, addCardModal];
+allModals.forEach((modal) => {
+  modal.addEventListener("click", closeOverlay);
+});
+
+function closeEscPress(evt) {
+  if (evt.key === "Escape" || evt.key === "Esc") {
+    const modal = document.querySelector(".modal_opened");
+    return closeModal(modal);
+  }
+}
+
+function closeOverlay(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}

@@ -103,7 +103,8 @@
   padding: 0;
 }
 
-.modal__button_create:hover {
+.modal__button_create:hover,
+.modal__button_save:hover {
   opacity: 0.6;
   cursor: pointer;
 }
