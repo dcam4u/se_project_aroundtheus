@@ -175,7 +175,7 @@ initialCards.forEach((cardData) => renderCard(cardData, cardListElement));
  *                ESC Press and Overlay Click Modal Close
  *========================================================================**/
 
-const allModals = [profileEditModal, addCardModal];
+const allModals = [profileEditModal, addCardModal, previewImageModal];
 allModals.forEach((modal) => {
   modal.addEventListener("click", closeOverlay);
 });
