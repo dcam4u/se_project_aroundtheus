@@ -1,21 +1,9 @@
 export default class Card {
-  constructor(
-    { name, link },
-    cardSelector,
-    handleImageClick
-    // openModal,
-    // previewImageModal,
-    // previewImageTitle,
-    // previewImage
-  ) {
+  constructor({ name, link }, cardSelector, handleImageClick) {
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
     this._handleImageClick = handleImageClick;
-    // this._openModal = openModal;
-    // this._previewImageModal = previewImageModal;
-    // this._previewImageTitle = previewImageTitle;
-    // this._previewImage = previewImage;
   }
 
   _setEventListeners() {
@@ -38,9 +26,7 @@ export default class Card {
   }
 
   _handleLikeIcon() {
-    this._cardElement
-      .querySelector(".card__like-button")
-      .classList.toggle("card__like-button_active");
+    this._likeButton.classList.toggle("card__like-button_active");
   }
 
   _handleDeleteCard() {
@@ -48,13 +34,6 @@ export default class Card {
     this._cardElement = null;
   }
 
-  // _handleImageClick() {
-  //   this._openModal(this._previewImageModal);
-  //   this._previewImageTitle.textContent = this._name;
-  //   this._previewImage.alt = this._name;
-  //   this._previewImage.src = this._link;
-  // }
-  //
   getView() {
     // get the card view
     this._cardElement = document
@@ -63,13 +42,17 @@ export default class Card {
       .cloneNode(true);
 
     // set the card image and title
-    const cardImage = this._cardElement.querySelector(".card__image");
-    const cardTitle = this._cardElement.querySelector(".card__title");
+    this._likeButton = this._cardElement.querySelector(".card__like-button");
+    this._cardImage = this._cardElement.querySelector(".card__image");
+    this._cardTitle = this._cardElement.querySelector(".card__title");
+    this._deleteButton = this._cardElement.querySelector(
+      ".card__delete-button"
+    );
 
     // set the src and alt attributes for the image, and the title text
-    cardImage.src = this._link;
-    cardImage.alt = this._name;
-    cardTitle.textContent = this._name;
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
+    this._cardTitle.textContent = this._name;
 
     // set event listeners
     this._setEventListeners();

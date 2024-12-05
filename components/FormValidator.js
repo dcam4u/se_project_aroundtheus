@@ -1,9 +1,9 @@
 export default class FormValidator {
   constructor(options, formElement) {
-    this._options = options;
-    this._formElement = formElement;
+    this._options = options; // Access to CSS selectors or class names
+    this._formElement = formElement; // Ensures Validator is tied to specific form element
     this._submitButton = this._formElement.querySelector(
-      this._options.submitButtonSelector
+      this._options.submitButtonSelector // Find and store submit button using selector in options
     );
   }
 
@@ -74,5 +74,17 @@ export default class FormValidator {
     });
 
     this._setEventListeners();
+  }
+
+  resetValidation() {
+    this._toggleButtonState();
+    this._inputElements.forEach((inputElement) => {
+      this._hideInputError(inputElement);
+    });
+  }
+
+  disableButton() {
+    this._submitButton.classList.add(this._options.inactiveButtonClass);
+    this._submitButton.disabled = true;
   }
 }

@@ -35,7 +35,7 @@
 // const card = new Card(cardData);
 
 // /**========================================================================
-//  *                             ELEMENTS
+//  /*                             ELEMENTS
 //  *========================================================================**/
 // const cardTemplate =
 //   document.querySelector("#card-template").content.firstElementChild;
@@ -81,8 +81,8 @@
 // );
 
 // /**========================================================================
-//  *                             FUNCTIONS
-//  *========================================================================**/
+//  /*                             FUNCTIONS
+//  /*========================================================================**/
 // function closeModal(modal) {
 //   modal.classList.remove("modal_opened");
 //   document.removeEventListener("keydown", closeEscPress);
